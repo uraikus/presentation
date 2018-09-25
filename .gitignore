@@ -59,3 +59,8 @@ typings/
 
 # next.js build output
 .next
+
+# other
+.cache
+dist
+.DS_Store
