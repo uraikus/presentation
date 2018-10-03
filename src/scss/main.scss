@@ -1,20 +1,57 @@
-body {
+html, body {
+  margin: 0;
   padding: 0;
-  background-color: black;
 }
 
-#toolbar {
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+}
 
+body {
+  background-color: white;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  padding: 0;
+}
+
+body > div {
+  height: calc(100% - 30px);
+}
+
+navbar {
+  height: 30px;
+  background-color: #2d2d2d;
+  color: white;
+  grid-column: span 3;
 }
 
 #slide-pane {
-
+  border-left: 3px ridge grey;
+  border-right: 3px ridge grey;
 }
 
-#tool-pane {
-
+#view-pane iframe {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-sizing: border-box;
+  margin: 0;
+  height: calc(50% - 25px);
+  width: 100%;
 }
 
-#live-pane {
-  
+.header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.toolbar {
+  background-color: #505050;
+  box-sizing: border-box;
+  margin: 0;
+  color: white;
+  height: 25px;
+  text-shadow: 0 0 5px black;
 }

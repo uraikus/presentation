@@ -2,10 +2,12 @@
   "name": "presentation",
   "version": "1.0.0",
   "description": "Presentation software for church's.",
-  "main": "dist/index.html",
+  "main": "src/views/controller.html",
   "private": true,
   "scripts": {
-    "start": "/Applications/nwjs.app/Contents/MacOS/nwjs ."
+    "start": "/Applications/nwjs.app/Contents/MacOS/nwjs .",
+    "devstart": "parcel watch ./src/views/index.html & npm run start",
+    "build": "parcel build ./src/views/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,9 @@
   "homepage": "https://github.com/uraikus/presentation#readme",
   "dependencies": {
     "@scriptleaf/treejs": "^0.5.0",
+    "express": "^4.16.3",
+    "express-sse": "^0.5.0",
+    "localforage": "^1.7.2",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7"
   }

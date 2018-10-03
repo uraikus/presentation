@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background-color: #000000;
+  color: white;
+  text-shadow: 0 0 6px black;
+}
+
+#title {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+}
+
+#content {
+  padding: 10px;
+  outline: none;
+}
+
+#viewer {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
