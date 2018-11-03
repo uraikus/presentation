@@ -4,8 +4,8 @@
   "description": "Presentation software for church's.",
   "private": true,
   "scripts": {
-    "start": "parcel ./src/views/index.html",
-    "build": "parcel build ./src/views/index.html"
+    "start": "parcel ./src/views/*.html --https",
+    "build": "parcel build ./src/views/*.html"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
     "@babel/core": "^7.1.2",
     "node-sass": "^4.9.3",
     "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "src": "^1.1.2"
+    "react-bootstrap": "^1.0.0-beta.1",
+    "react-dom": "^16.6.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",

@@ -1,7 +1,7 @@
 /* global db, churchID */
 
 import React from 'react'
-import Slides from './slides.js'
+import Slides from '../slides/slides.js'
 
 class Viewer extends React.Component {
   constructor (props) {
