@@ -1,0 +1,9 @@
+{
+  "indexes": [
+    "collectionId": "slides",
+    "fields": [
+      { "fieldPath": "access", "mode": "ASCENDING" },
+      { "fieldPath": "set", "mode": "ASCENDING" }
+    ]
+  ]
+}

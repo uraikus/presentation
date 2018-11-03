@@ -1,9 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <script src="../js/~tree.js" defer></script>
-    <script src="../js/slideViewer.js" defer></script>
+    <title>Church Slide Viewer</title>
   </head>
   <body>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
+    <script>
+      const churchID = location.pathname.replace('/', '')
+      firebase.initializeApp({
+        apiKey: "AIzaSyCHEoNNKGQZ79iyi920mAekw7sDVm6EyDU",
+        authDomain: "presentation-ec06b.firebaseapp.com",
+        databaseURL: "https://presentation-ec06b.firebaseio.com",
+        projectId: "presentation-ec06b",
+        storageBucket: "presentation-ec06b.appspot.com",
+        messagingSenderId: "407739535503"
+      })
+      const db = firebase.firestore()
+      db.settings({
+        timestampsInSnapshots: true
+      })
+    </script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="../js/index.js"></script>
   </body>
-</html>
+</head>

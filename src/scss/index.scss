@@ -1,31 +1,25 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 150%;
+  padding: 10px;
 }
 
-body {
-  background-color: #000000;
-  color: white;
-  text-shadow: 0 0 6px black;
+#title, #body {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  text-shadow: 0 0 5px black;
+  transition: all .6s;
 }
 
 #title {
-  margin: 0;
-  padding: 10px;
   text-align: center;
-  outline: none;
-}
-
-#content {
   padding: 10px;
-  outline: none;
 }
 
-#viewer {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
+#body {
+  padding: 10px 10px 10px 30px;
 }
