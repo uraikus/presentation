@@ -4,7 +4,7 @@
   "description": "Presentation software for church's.",
   "private": true,
   "scripts": {
-    "start": "parcel ./src/views/*.html --https",
+    "start": "parcel watch ./src/views/*.html & firebase serve --only hosting",
     "build": "parcel build ./src/views/*.html"
   },
   "repository": {
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
     "parcel-bundler": "^1.10.3"
   }
 }

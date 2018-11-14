@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <title>Church Slide Viewer</title>
+    <link rel="shortcut icon" type="image/png" href="../res/app-icon.png">
   </head>
   <body>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
     <script>
+      var App = {
+        accountCreate: false
+      }
       firebase.initializeApp({
         apiKey: "AIzaSyCHEoNNKGQZ79iyi920mAekw7sDVm6EyDU",
         authDomain: "presentation-ec06b.firebaseapp.com",

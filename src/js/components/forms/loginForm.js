@@ -21,14 +21,14 @@ class LoginForm extends React.Component {
           this.setState({ error: err.message })
         })
         .then(() => {
-          if (noError === true) window.open('index.html', '_top')
+          if (noError === true) window.open('/', '_top')
         })
     }
   }
 
   render () {
     return (
-      <React.Fragment>
+      <div className='form'>
         <h1>Login</h1>
         <div>
           <sup>Email</sup>
@@ -38,11 +38,11 @@ class LoginForm extends React.Component {
           <sup>Password</sup>
           <input type='password' placeholder='password' onChange={ev => this.setState({ password: ev.target.value })} value={this.state.password} onKeyDown={this.login} />
         </div>
-        <div>{this.state.error}</div>
+        <div className='error'>{this.state.error}</div>
         <div>
           <input type='button' value='Login' onClick={() => this.login({ key: 'Enter' })} />
         </div>
-      </React.Fragment>
+      </div>
     )
   }
 }

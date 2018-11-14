@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+}
+
+.tabs {
+  display: inline-block;
+}
+
+.tabs span {
+  display: inline-block;
+  background-color: rgb(99, 99, 99);
+  padding: 4px;
+  border-radius: 5px 5px 0 0;
+  margin-right: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.tabs span[data-checked="true"] {
+  background-color: rgb(54, 54, 54);
+}
+
+.form {
+  background-color: rgb(54, 54, 54);
+  border-radius: 0 10px 10px 10px;
+  font-size: 150%;
+  color: white;
+  padding: 10px;
+}
+
+.form sup {
+  display: block;
+  font-size: 50%;
+}
+
+.form h1 {
+  margin: 10px;
+}
+
+.form input {
+  box-sizing: border-box;
+  color: white;
+  border: none;
+  background-color: rgb(96, 96, 96);
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 150%;
+  width: 100%;
+}
+
+.form input[type="button"] {
+  cursor: pointer;
+  background-color: rgb(33, 135, 207);
+}

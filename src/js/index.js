@@ -1,8 +1,7 @@
-import '../scss/index.scss'
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Viewer from './components/viewer/viewer.js'
+/* globals firebase */
 
-let renderer = document.createElement('div')
-document.body.appendChild(renderer)
-ReactDOM.render(<Viewer />, renderer)
+firebase.auth().onAuthStateChanged(user => {
+  if (!user) {
+    window.open('/login', '_top')
+  }
+})

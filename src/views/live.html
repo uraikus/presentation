@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Church Slide Crafter</title>
+    <title>Church Slide Viewer</title>
     <link rel="shortcut icon" type="image/png" href="../res/app-icon.png">
   </head>
   <body>
@@ -9,6 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
     <script>
+      const churchID = location.pathname.replace('/live/', '')
       firebase.initializeApp({
         apiKey: "AIzaSyCHEoNNKGQZ79iyi920mAekw7sDVm6EyDU",
         authDomain: "presentation-ec06b.firebaseapp.com",
@@ -24,6 +25,6 @@
     </script>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/live.js"></script>
   </body>
 </head>
