@@ -1,0 +1,95 @@
+#slide-viewer, #slide-selector {
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+#slide-viewer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 150%;
+  padding: 10px;
+  right: 0;
+  width: calc(100% - 250px);
+}
+
+#slide-selector {
+  background-color: rgb(37, 37, 37);
+  border-right: 5px ridge rgb(33, 33, 33);
+  overflow: auto;
+  left: 0;
+  padding: 10px;
+  width: 250px;
+}
+
+#new-slide {
+  background: radial-gradient(#454545, #2e2e2e);
+  color: white;
+  font-size: 20px;
+  position: relative;
+  text-shadow: 0 0 4px black;
+}
+
+#new-slide span {
+  position: absolute;
+  text-align: center;
+  top: calc(50% - 10px);
+  width: 100%;
+}
+
+.slide, #new-slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  border: 1px solid grey;
+  box-shadow: 3px 3px 5px black;
+  cursor: pointer;
+  height: 128px;
+  margin: 10px;
+  padding: 4px;
+  position: relative;
+}
+
+.slide:hover, #new-slide:hover {
+  border-color: gold;
+}
+
+.slide .title, .slide .body {
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.slide .title {
+  font-size: 14px;
+  height: 25px;
+  margin-bottom: 3px;
+  padding: 3px;
+}
+
+.slide .body {
+  font-size: 8px;
+  height: calc(100% - 31px);
+  padding: 3px 3px 3px 8px;
+}
+
+.slide:hover .delete-slide {
+  visibility: visible;
+}
+
+.delete-slide {
+  background-color: red;
+  border-radius: 6px;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+}

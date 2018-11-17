@@ -20,8 +20,8 @@ class Viewer extends React.Component {
     document.body.style.backgroundImage = `url(${Slides[this.state.img]})`
     return (
       <div>
-        <h1 id='title'>{this.state.title}</h1>
-        <div id='body'>{this.state.body}</div>
+        <input className='title' readOnly value={this.state.title} />
+        <textarea className='body' readOnly value={this.state.body} />
       </div>
     )
   }

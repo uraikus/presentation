@@ -1,15 +1,27 @@
-#title, #body {
+.title, .body, {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  text-shadow: 0 0 5px black;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  outline: none;
+  resize: none;
+  text-shadow: 0 0 4px black;
   transition: all .6s;
+  color: white;
+  width: 100%;
 }
 
-#title {
-  text-align: center;
+.title {
+  font-size: 75px;
   padding: 10px;
+  height: 90px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-#body {
+.body {
+  font-size: 40px;
+  height: calc(100% - 110px);
   padding: 10px 10px 10px 30px;
 }

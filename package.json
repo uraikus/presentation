@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/uraikus/presentation#readme",
   "dependencies": {
-    "@babel/core": "^7.1.2",
-    "node-sass": "^4.9.3",
-    "react": "^16.6.0",
-    "react-bootstrap": "^1.0.0-beta.1",
-    "react-dom": "^16.6.0"
+    "@babel/core": "^7.1.6",
+    "node-sass": "^4.10.0",
+    "react": "^16.6.3",
+    "react-bootstrap": "^1.0.0-beta.3",
+    "react-dom": "^16.6.3"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
