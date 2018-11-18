@@ -1,4 +1,3 @@
-import './background-chooser.scss'
 import React from 'react'
 import Slides from '../slides/slides.js'
 

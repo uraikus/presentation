@@ -1,0 +1,72 @@
+#sidebar {
+  background-color: #252525;
+  border-left: 5px ridge #212121;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50px;
+}
+
+#share-button {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    margin: 10px;
+  }
+
+  input {
+    border: none;
+    border-radius: 5px;
+    font-size: 125%;
+    width: 300px;
+    position: absolute;
+    top: 15px;
+    right: 100%;
+  }
+}
+
+#share-button:hover {
+  overflow: visible;
+}
+
+#sign-out-button {
+  bottom: 0;
+  cursor: pointer;
+  margin: 10px;
+  position: absolute;
+}
+
+#background-chooser {
+  border-radius: 50%;
+  border: 2px outset gold;
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
+  height: 40px;
+  margin-left: 3px;
+  overflow: hidden;
+  width: 40px;
+  z-index: 1;
+
+  img {
+    display: none;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#background-chooser:hover {
+  border-radius: 5px;
+  height: auto;
+  position: absolute;
+
+  img {
+      display: block;
+  }
+
+  img:hover {
+    box-shadow: 2px 2px 5px black;
+  }
+}

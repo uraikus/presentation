@@ -18,11 +18,14 @@ class SlideSelector extends React.Component {
             outline: slide.id === this.props.parent.state.activeSlide ? '3px solid green' : ''
           }
           return (
-            <div className='slide' style={style} key={slide.id} onClick={() => selectSlide(this.props.parent, slide.id)}>
-              <span className='delete-slide' onClick={ev => deleteSlide.bind(this)(ev, index)}>X</span>
-              <input className='title' readOnly value={slide.title} />
-              <textarea className='body' readOnly value={slide.body} />
-            </div>
+            <React.Fragment>
+              <div className='insert-slide' key={index} onClick={() => addBlankSlide.bind(this)(index)}>+ - insert slide</div>
+              <div className='slide' style={style} key={slide.id} onClick={() => selectSlide(this.props.parent, slide.id)}>
+                <span className='delete-slide' onClick={ev => deleteSlide.bind(this)(ev, index)}>X</span>
+                <input className='title' readOnly value={slide.title} />
+                <textarea className='body' readOnly value={slide.body} />
+              </div>
+            </React.Fragment>
           )
         })}
         <div id='new-slide' onClick={addBlankSlide.bind(this)}>

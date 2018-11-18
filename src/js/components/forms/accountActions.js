@@ -22,6 +22,7 @@ function createAccount (state) {
 }
 
 function loginAccount (state) {
+  console.log(state)
   return firebase.auth().signInWithEmailAndPassword(state.email, state.password)
 }
 

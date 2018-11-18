@@ -12,8 +12,8 @@
   color: white;
   font-size: 150%;
   padding: 10px;
-  right: 0;
-  width: calc(100% - 250px);
+  right: 50px;
+  width: calc(100% - 300px);
 }
 
 #slide-selector {
@@ -29,6 +29,7 @@
   background: radial-gradient(#454545, #2e2e2e);
   color: white;
   font-size: 20px;
+  margin-top: 10px !important;
   position: relative;
   text-shadow: 0 0 4px black;
 }
@@ -49,7 +50,7 @@
   box-shadow: 3px 3px 5px black;
   cursor: pointer;
   height: 128px;
-  margin: 10px;
+  margin: 4px;
   padding: 4px;
   position: relative;
 }
@@ -81,6 +82,18 @@
   visibility: visible;
 }
 
+.insert-slide {
+  color: rgba(#252525, 0);
+  cursor: pointer;
+  height: 10px;
+  font-size: 75%;
+  text-align: center;
+}
+
+.insert-slide:hover {
+  color: gold;
+}
+
 .delete-slide {
   background-color: red;
   border-radius: 6px;
@@ -89,7 +102,7 @@
   font-weight: bold;
   padding: 4px;
   position: absolute;
-  right: 0;
-  top: 0;
+  left: -10px;
+  top: -10px;
   visibility: hidden;
 }
