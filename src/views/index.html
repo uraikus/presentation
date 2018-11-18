@@ -17,7 +17,7 @@
         storageBucket: "presentation-ec06b.appspot.com",
         messagingSenderId: "407739535503"
       })
-      const db = firebase.firestore()
+      window.db = firebase.firestore()
       db.settings({
         timestampsInSnapshots: true
       })

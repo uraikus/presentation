@@ -9,7 +9,7 @@ const UUID = require('uuid/v4')
 
 firebase.auth().onAuthStateChanged(user => {
   if (!user) {
-    window.open('/login', '_top')
+    window.open('/login.html', '_top')
   } else {
     let renderer = document.createElement('div')
     document.body.appendChild(renderer)
