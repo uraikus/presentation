@@ -9,7 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
     <script>
-      const churchID = location.pathname.replace('/live/', '')
+      window.churchID = location.href.split('?')[1]
       firebase.initializeApp({
         apiKey: "AIzaSyCHEoNNKGQZ79iyi920mAekw7sDVm6EyDU",
         authDomain: "presentation-ec06b.firebaseapp.com",
@@ -18,7 +18,7 @@
         storageBucket: "presentation-ec06b.appspot.com",
         messagingSenderId: "407739535503"
       })
-      const db = firebase.firestore()
+      window.db = firebase.firestore()
       db.settings({
         timestampsInSnapshots: true
       })

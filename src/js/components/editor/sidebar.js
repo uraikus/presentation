@@ -13,7 +13,7 @@ class Sidebar extends React.Component {
         <BackgroundChooser state={this.props.state} setState={this.props.setState} />
         <div id='share-button'>
           <img src={shareImage} />
-          <input readOnly value={`${location.origin}/live/${firebase.auth().getUid()}`} />
+          <input readOnly value={`${location.origin}/live.html?${firebase.auth().getUid()}`} />
         </div>
         <img id='sign-out-button' title='Sign out...' src={signOutImage} onClick={() => firebase.auth().signOut()} />
       </div>

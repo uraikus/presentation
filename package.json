@@ -19,6 +19,7 @@
   "homepage": "https://github.com/uraikus/presentation#readme",
   "dependencies": {
     "@babel/core": "^7.1.6",
+    "fscreen": "^1.0.2",
     "node-sass": "^4.10.0",
     "react": "^16.6.3",
     "react-bootstrap": "^1.0.0-beta.3",

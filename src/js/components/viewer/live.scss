@@ -7,3 +7,18 @@ body {
   font-size: 150%;
   padding: 10px;
 }
+
+#slide-viewer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  color: white;
+  font-size: 150%;
+  height: 100%;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}

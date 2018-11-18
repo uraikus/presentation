@@ -9,7 +9,7 @@ class Viewer extends React.Component {
     this.state = {
       title: '',
       body: '',
-      img: ''
+      img: 'blue'
     }
     db.collection('live-slides').doc(churchID)
       .onSnapshot(doc => {
@@ -17,9 +17,8 @@ class Viewer extends React.Component {
       })
   }
   render () {
-    document.body.style.backgroundImage = `url(${Slides[this.state.img]})`
     return (
-      <div>
+      <div id='slide-viewer' style={{ backgroundImage: `url(${Slides[this.state.img]})` }}>
         <input className='title' readOnly value={this.state.title} />
         <textarea className='body' readOnly value={this.state.body} />
       </div>
