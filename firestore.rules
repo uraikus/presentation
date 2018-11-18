@@ -7,5 +7,8 @@ service cloud.firestore {
     match /live-slides/{userID} {
       allow delete, write: if request.auth.uid == userID;
     }
+    match /user-slides/{userID} {
+      allow delete, write: if request.auth.uid == userID;
+    }
   }
 }
