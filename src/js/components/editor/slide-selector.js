@@ -13,13 +13,14 @@ class SlideSelector extends React.Component {
     return (
       <div id='slide-selector'>
         {this.props.parent.state.slides.map((slide, index) => {
+          let img = Slides[slide.img] ? `url(${Slides[slide.img]})` : `url(${slide.img})`
           let style = {
-            backgroundImage: `url(${Slides[slide.img]})`,
-            outline: slide.id === this.props.parent.state.activeSlide ? '3px solid green' : ''
+            backgroundImage: img,
+            boxShadow: slide.id === this.props.parent.state.activeSlide ? '0 0 10px green' : ''
           }
           return (
-            <React.Fragment>
-              <div className='insert-slide' key={index} onClick={() => addBlankSlide.bind(this)(index)}>+ - insert slide</div>
+            <React.Fragment key={index}>
+              <div className='insert-slide' onClick={() => addBlankSlide.bind(this)(index)}>+ - insert slide</div>
               <div className='slide' style={style} key={slide.id} onClick={() => selectSlide(this.props.parent, slide.id)}>
                 <span className='delete-slide' onClick={ev => deleteSlide.bind(this)(ev, index)}>X</span>
                 <input className='title' readOnly value={slide.title} />
