@@ -50,6 +50,9 @@
   b {
     transition: color .6s;
   }
+  b[data-active="true"] {
+    background: linear-gradient(to bottom right, #466bbb, #92a6b1);
+  }
   b:hover {
     background-color: #fff;
     color: #252525;

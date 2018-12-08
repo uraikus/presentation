@@ -52,6 +52,7 @@ function deleteSlide (ev, index) {
         title: '',
         body: '',
         img: 'blue',
+        className: '',
         id: UUID()
       }
       oldState.activeSlide = oldState.slides[activeIndex].id
@@ -67,6 +68,7 @@ function addBlankSlide (insertIndex) {
       img: insertIndex !== 0 ? oldState.slides[insertIndex - 1].img : 'blue',
       title: '',
       body: '',
+      className: '',
       id: UUID()
     })
     return oldState

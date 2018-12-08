@@ -13,11 +13,12 @@ class Viewer extends React.Component {
       title: slide.title,
       body: slide.body,
       img: slide.img,
+      className: slide.className,
       id: slide.id
     })
     let img = Slides[slide.img] ? `url(${Slides[slide.img]})` : `url(${slide.img})`
     return (
-      <div id='slide-viewer' style={{ backgroundImage: img }}>
+      <div id='slide-viewer' style={{ backgroundImage: img }} className={slide.className || ''}>
         <input className='title' onChange={ev => {
           let value = ev.target.value
           this.props.setState(oldState => {

@@ -9,6 +9,7 @@ import uploadImage from './upload-light.svg'
 import cogImage from './cog-solid.svg'
 
 function Sidebar (props) {
+  let slideClass = props.state.slides.find(slide => slide.id === props.state.activeSlide).className
   return (
     <div id='sidebar'>
       <BackgroundChooser state={props.state} setState={props.setState} />
@@ -18,9 +19,9 @@ function Sidebar (props) {
         <img src={cogImage} />
         <div>
           <span>
-            <b>w/ Header</b>
-            <b className='middle-borders'>Only Body</b>
-            <b>No Text</b>
+            <b data-active={slideClass === ''} onClick={() => changeLayout(props.setState, '')}>w/ Header</b>
+            <b data-active={slideClass === 'no-header'} className='middle-borders' onClick={() => changeLayout(props.setState, 'no-header')}>Only Body</b>
+            <b data-active={slideClass === 'hide-parts'} onClick={() => changeLayout(props.setState, 'hide-parts')}>No Text</b>
           </span>
         </div>
       </div>
@@ -48,6 +49,14 @@ function loadCustomBackground (setState) {
     imgInput.value = ''
   }
   fileReader.readAsDataURL(imgInput.files[0])
+}
+
+function changeLayout (setState, className) {
+  setState(prevState => {
+    let curSlide = prevState.slides.find(slide => slide.id === prevState.activeSlide)
+    curSlide.className = className
+    return prevState
+  })
 }
 
 export default Sidebar

@@ -19,7 +19,7 @@ class Viewer extends React.Component {
   render () {
     let img = Slides[this.state.img] ? `url(${Slides[this.state.img]})` : `url(${this.state.img})`
     return (
-      <div id='slide-viewer' style={{ backgroundImage: img }}>
+      <div id='slide-viewer' style={{ backgroundImage: img }} className={this.state.className || ''}>
         <input className='title' readOnly value={this.state.title} />
         <textarea className='body' readOnly value={this.state.body} />
       </div>

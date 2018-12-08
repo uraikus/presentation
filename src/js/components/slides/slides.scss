@@ -25,3 +25,18 @@
   height: calc(100% - 110px);
   padding: 10px 10px 10px 30px;
 }
+
+.no-header {
+  .title {
+    display: none;
+  }
+  .body {
+    height: 100%;
+  }
+}
+
+.hide-parts {
+  .title, .body {
+    display: none;
+  }
+}
