@@ -23,8 +23,10 @@ class SlideSelector extends React.Component {
               <div className='insert-slide' onClick={() => addBlankSlide.bind(this)(index)}>+ - insert slide</div>
               <div className='slide' style={style} key={slide.id} onClick={() => selectSlide(this.props.parent, slide.id)}>
                 <span className='delete-slide' onClick={ev => deleteSlide.bind(this)(ev, index)}>X</span>
-                <input className='title' readOnly value={slide.title} />
-                <textarea className='body' readOnly value={slide.body} />
+                <span className={slide.className}>
+                  <input className='title' readOnly value={slide.title} />
+                  <textarea className='body' readOnly value={slide.body} />
+                </span>
               </div>
             </React.Fragment>
           )
