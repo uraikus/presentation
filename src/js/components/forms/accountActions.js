@@ -38,6 +38,7 @@ function updateLiveSlide (displayname) {
     db.collection('live-slides').doc(userData.uid).set({
       body: 'Welcome to our Church!',
       title: displayname,
+      className: '',
       img: 'blue'
     }).then(resolve).catch(reject)
   })
